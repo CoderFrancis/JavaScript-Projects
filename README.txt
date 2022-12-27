@@ -1,0 +1,1 @@
+This repository is for projects I've created in support of The Tech Academy.
