@@ -55,6 +55,8 @@ function Age_Function() {
     document.getElementById("How_old_are_you?").innerHTML = Vote;
 }
 
+// Time function code, pulls time from computer //
+
 function Time_function()    {
     var Time = new Date().getHours();
     var Reply;
