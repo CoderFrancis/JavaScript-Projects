@@ -36,7 +36,7 @@ function exercises() {
         Human_Picture[0]  + ".";
 }
 
-// Insert Comment //
+// Constant_Function //
 
 function constant_function()    {
     const Musical_Instrument = {type:"guitar", brand:"Fender", color:"black"};
@@ -44,4 +44,49 @@ function constant_function()    {
     Musical_Instrument.price = "$900";
     document.getElementById("Constant").innerHTML = "The cost of the " +
         Musical_Instrument.type + " was " + Musical_Instrument.price;
+}
+
+// Let_Keyword //
+
+var X = 82;
+document.write(X);
+{
+    let X = 33;
+    document.write("<br>" + X);
+}
+document.write("<br>" + X);
+
+var X = 82;
+document.write(X);
+{
+    var X = 33;
+    document.write("<br>" + X);
+}
+document.write("<br>" + X);
+
+// Object //
+
+let car = {
+    make: "Dodge ",
+    model: "Viper ",
+    year: "2021 ",
+    color: "red ",
+    description: function() {
+        return "This car is a " + this.year + this.color + this.make + this.model;
+    }
+};
+document.getElementById("Car_Object").innerHTML = car.description();
+
+// Break_Statement //
+
+for (let i = 0; i < 10; i++)    {
+    if (i === 3)  { break; }
+    text += "The number is " + i + "<br>"
+}
+
+// Continue_Statement //
+
+for (let i = 0; i < 10; i++)    {
+    if (i === 3)  { continue; }
+    text += "The number is " + i + "<br>"
 }
