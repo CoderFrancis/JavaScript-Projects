@@ -27,7 +27,7 @@ function placeXOrO(squareNumber)    {
         // This condition is for changing the active player.
         if (activePlayer === "X")   {
             // If active player is "X" change it to "O".
-            activePlayer = "0";
+            activePlayer = "O";
             //if active player is anything other than "X"
         } else  {
             // Change the activePlayer to "X"
@@ -36,7 +36,7 @@ function placeXOrO(squareNumber)    {
         //This function plays placement sound.
         audio("./media/place.mp3");
         // This condition checks to see if it is the computers turn.
-        if (activePlayer === "0")   {
+        if (activePlayer === "O")   {
             // This function disables clicking for computers turn.
             disableClick();
             // This function waits 1 second before the computer places an image and enables click.
@@ -76,7 +76,7 @@ function checkWinConditions()   {
     // x 6, 7, 8 condition.
     else if (arrayIncludes("6X", "7X", "8X"))   { drawWinLine(50, 508, 558, 508) }
     // x 0, 3, 6 condition.
-    else if (arrayIncludes("OX", "3X", "6X"))   { drawWinLine(100, 50, 100, 558) }   
+    else if (arrayIncludes("0X", "3X", "6X"))   { drawWinLine(100, 50, 100, 558) }   
     // x 1, 4, 7 condition.
     else if (arrayIncludes("1X", "4X", "7X"))   { drawWinLine(304, 50, 304, 558) }
     // x 2, 5, 8 condition.
@@ -84,9 +84,9 @@ function checkWinConditions()   {
     // x 6, 4, 2 condition.
     else if (arrayIncludes("6X", "4X", "2X"))   { drawWinLine(100, 508, 510, 90) }
     // x 0, 4, 8 condition.
-    else if (arrayIncludes("OX", "4X", "8X"))   { drawWinLine(100, 100, 520, 520) }
+    else if (arrayIncludes("0X", "4X", "8X"))   { drawWinLine(100, 100, 520, 520) }
     // o 0, 1, 2 condition.
-    else if (arrayIncludes("XO", "1O", "2O"))   { drawWinLine(50, 100, 558, 100) }
+    else if (arrayIncludes("0O", "1O", "2O"))   { drawWinLine(50, 100, 558, 100) }
     // x 3, 4, 5 condition.
     else if (arrayIncludes("3O", "4O", "5O"))   { drawWinLine(50, 304, 558, 304) }
     // x 6, 7, 8 condition.
@@ -96,11 +96,11 @@ function checkWinConditions()   {
     // o 1, 4, 7 condition.
     else if (arrayIncludes("1O", "4O", "7O"))   { drawWinLine(304, 50, 304, 558) }
     // o 2, 5, 8 condition.
-    else if (arrayIncludes("20", "50", "80"))   { drawWinLine(508, 50, 508, 558) }
+    else if (arrayIncludes("2O", "5O", "8O"))   { drawWinLine(508, 50, 508, 558) }
     // x 6, 4, 2 condition.
-    else if (arrayIncludes("60", "40", "20"))   { drawWinLine(100, 508, 510, 90) }
+    else if (arrayIncludes("6O", "4O", "2O"))   { drawWinLine(100, 508, 510, 90) }
     // o 0, 4, 8 condition.
-    else if (arrayIncludes("XO", "4O", "8O"))   { drawWinLine(508, 50, 508, 558) }
+    else if (arrayIncludes("0O", "4O", "8O"))   { drawWinLine(100, 100, 520, 520) }
     // This condition checks for a tie. If none of the above conditions are met
     // and 9 squares are selected the code executes.
     else if (selectedSquares.length >= 9)   {
