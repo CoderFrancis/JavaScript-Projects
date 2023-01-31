@@ -43,7 +43,7 @@ function Handle_Operator(Next_Operator) {
     //When an operator key is pressed we convert the current number
     //displayed on the screento a number and then store the result in
     //Calculator.First_Operand if it doesn't already exit.
-    const Value_of_Input = parse(Display_Value);
+    const Value_of_Input = parseFloat(Display_Value);
     //Checks if an operator already exists and if Wait_Second_Operand is true,
     //then updates the operator an exits from the function.
     if (operator && Calculator.Wait_Second_Operand) {
@@ -52,7 +52,7 @@ function Handle_Operator(Next_Operator) {
     }
     if (First_Operand == null)  {
         Calculator.First_Operand = Value_of_Input;
-    }else if (operator) {//Checks if an operator already exists
+    } else if (operator) {//Checks if an operator already exists
         const Value_Now = First_Operand || 0;
         //If operator exists, property lookup is performed for the operator
         //in the Perform_Calculation object and the function that matches the
