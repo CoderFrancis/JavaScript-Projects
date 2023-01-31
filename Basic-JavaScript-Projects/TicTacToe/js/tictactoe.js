@@ -70,37 +70,37 @@ function placeXOrO(squareNumber)    {
 // drawLine() function is called to draw a line on the screen if the condition is met.
 function checkWinConditions()   {
     // X 0, 1, 2 condiion.
-    if (arrayIncludes("0X, 1X, 2X"))    { drawWinLine(50, 100, 558, 100)    }
+    if (arrayIncludes("0X", "1X", "2X"))    { drawWinLine(50, 100, 558, 100)    }
     // x 3, 4, 5 condition.
-    else if (arrayIncludes("3X, 4X, 5X"))   { drawWinLine(50, 304, 558, 304) }
+    else if (arrayIncludes("3X", "4X", "5X"))   { drawWinLine(50, 304, 558, 304) }
     // x 6, 7, 8 condition.
-    else if (arrayIncludes("6x, 7x, 8x"))   { drawWinLine(50, 508, 558, 508) }
+    else if (arrayIncludes("6X", "7X", "8X"))   { drawWinLine(50, 508, 558, 508) }
     // x 0, 3, 6 condition.
-    else if (arrayIncludes("0x, 3x, 6x"))   { drawWinLine(100, 50, 100, 558) }   
+    else if (arrayIncludes("OX", "3X", "6X"))   { drawWinLine(100, 50, 100, 558) }   
     // x 1, 4, 7 condition.
-    else if (arrayIncludes("1x, 4x, 7x"))   { drawWinLine(304, 50, 304, 558) }
+    else if (arrayIncludes("1X", "4X", "7X"))   { drawWinLine(304, 50, 304, 558) }
     // x 2, 5, 8 condition.
-    else if (arrayIncludes("2x, 5x, 8x"))   { drawWinLine(508, 50, 508, 558) }
+    else if (arrayIncludes("2X", "5X", "8X"))   { drawWinLine(508, 50, 508, 558) }
     // x 6, 4, 2 condition.
-    else if (arrayIncludes("6x, 4x, 2x"))   { drawWinLine(100, 508, 510, 90) }
+    else if (arrayIncludes("6X", "4X", "2X"))   { drawWinLine(100, 508, 510, 90) }
     // x 0, 4, 8 condition.
-    else if (arrayIncludes("0x, 4x, 8x"))   { drawWinLine(100, 100, 520, 520) }
+    else if (arrayIncludes("OX", "4X", "8X"))   { drawWinLine(100, 100, 520, 520) }
     // o 0, 1, 2 condition.
-    else if (arrayIncludes("0O, 10, 20"))   { drawWinLine(50, 100, 558, 100) }
+    else if (arrayIncludes("XO", "1O", "2O"))   { drawWinLine(50, 100, 558, 100) }
     // x 3, 4, 5 condition.
-    else if (arrayIncludes("30, 40, 50"))   { drawWinLine(50, 304, 558, 304) }
+    else if (arrayIncludes("3O", "4O", "5O"))   { drawWinLine(50, 304, 558, 304) }
     // x 6, 7, 8 condition.
-    else if (arrayIncludes("60, 70, 80"))   { drawWinLine(50, 508, 558, 508) }
+    else if (arrayIncludes("6O", "7O", "8O"))   { drawWinLine(50, 508, 558, 508) }
     // o 0, 3, 6 condition.
-    else if (arrayIncludes("0O, 30, 60"))   { drawWinLine(100, 50, 100, 558) }
+    else if (arrayIncludes("XO", "3O", "6O"))   { drawWinLine(100, 50, 100, 558) }
     // o 1, 4, 7 condition.
-    else if (arrayIncludes("10, 40, 70"))   { drawWinLine(304, 50, 304, 558) }
+    else if (arrayIncludes("1O", "4O", "7O"))   { drawWinLine(304, 50, 304, 558) }
     // o 2, 5, 8 condition.
-    else if (arrayIncludes("20, 50, 80"))   { drawWinLine(508, 50, 508, 558) }
+    else if (arrayIncludes("20", "50", "80"))   { drawWinLine(508, 50, 508, 558) }
     // x 6, 4, 2 condition.
-    else if (arrayIncludes("60, 40, 20"))   { drawWinLine(100, 508, 510, 90) }
+    else if (arrayIncludes("60", "40", "20"))   { drawWinLine(100, 508, 510, 90) }
     // o 0, 4, 8 condition.
-    else if (arrayIncludes("0O, 40, 80"))   { drawWinLine(508, 50, 508, 558) }
+    else if (arrayIncludes("XO", "4O", "8O"))   { drawWinLine(508, 50, 508, 558) }
     // This condition checks for a tie. If none of the above conditions are met
     // and 9 squares are selected the code executes.
     else if (selectedSquares.length >= 9)   {
